@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maestría - Documentos de Investigación</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #fafafa;
+            color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #111;
+        }
+        .buttons-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            background-color: #f0f0f2;
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid #dcdce0;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        .btn:hover {
+            background-color: #e4e4e8;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Maestría</h1>
+        
+        <div class="buttons-wrapper">
+            <!-- Botón 1: Obj de Estudio -->
+            <a href="obj-estudio.pdf" class="btn" onclick="checkFile(event, this.getAttribute('href'))">Obj de Estudio</a>
+            
+            <!-- Botón 2: Protocolo -->
+            <a href="protocolo.pdf" class="btn" onclick="checkFile(event, this.getAttribute('href'))">Protocolo</a>
+            
+            <!-- Botón 3: Tesis -->
+            <a href="tesis.pdf" class="btn" onclick="checkFile(event, this.getAttribute('href'))">Tesis</a>
+        </div>
+    </div>
+
+    <script>
+        function checkFile(event, url) {
+            // Verificamos si el archivo está vacío o tiene el enlace por defecto
+            if (!url || url === "#" || url === "") {
+                event.preventDefault();
+                alert("Coming soon");
+            }
+        }
+    </script>
+
+</body>
+</html>
