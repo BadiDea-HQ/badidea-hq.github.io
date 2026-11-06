@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ricardo Rivera Carrillo | Portafolio</title>
+    <title>Ricardo Rivera Carrillo</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: "Times New Roman", Times, serif;
             margin: 0;
             padding: 0;
-            /* Imagen de fondo simulando el cielo/nubes estilo tu amigo */
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
                         url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1600&auto=format&fit=crop') no-repeat center center fixed;
             background-size: cover;
-            color: #fff;
+            color: #ffffff;
             text-align: center;
             min-height: 100vh;
             display: flex;
@@ -22,102 +21,98 @@
             justify-content: center;
         }
         .container {
-            max-width: 700px;
+            max-width: 750px;
             padding: 20px;
         }
-        /* Foto de perfil circular */
+
+        /* ESTILO DEL ICONO DE PERFIL CIRCULAR */
         .profile-img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid rgba(255, 255, 255, 0.8);
+            width: 140px;
+            height: 140px;
+            aspect-ratio: 1 / 1;          /* Asegura que siempre sea un cuadrado perfecto */
+            border-radius: 50%;          /* Transforma el cuadrado en un círculo perfecto */
+            object-fit: cover;           /* Recorta la imagen al centro sin deformar la cara */
+            object-position: center;     /* Centra la cara dentro del círculo */
+            border: 3px solid rgba(255, 255, 255, 0.85); /* Borde blanco sutil */
             margin-bottom: 20px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);       /* Sombra para darle profundidad */
         }
+
         h1 {
-            font-size: 2.2rem;
-            margin: 10px 0;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            font-size: 2.6rem;
+            margin: 0 0 10px 0;
+            font-weight: normal;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
         }
-        .contact-info {
-            font-size: 1rem;
-            margin-bottom: 15px;
-            opacity: 0.9;
+        .email {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            letter-spacing: 0.5px;
         }
-        .tagline {
-            font-size: 1.05rem;
-            margin-bottom: 30px;
+        .bio {
+            font-size: 1.1rem;
+            margin-bottom: 35px;
             line-height: 1.5;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.6);
         }
-        /* Etiquetas estilo píldora de colores */
-        .tags-wrapper {
+        
+        /* Contenedor de etiquetas */
+        .tags-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .tags-row {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             flex-wrap: wrap;
-            margin-bottom: 40px;
         }
         .tag {
-            padding: 8px 16px;
+            padding: 8px 18px;
             border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            font-size: 0.9rem;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: 500;
             color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
         }
-        .tag-dev { background-color: #e91e63; }
-        .tag-vr { background-color: #2196f3; }
-        .tag-xr { background-color: #009688; }
-        .tag-inv { background-color: #f44336; }
-
-        /* Sección de redes o accesos */
-        .section-links {
-            margin-top: 20px;
-        }
-        .link-btn {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: background 0.2s;
-        }
-        .link-btn:hover {
-            background: rgba(255, 255, 255, 0.4);
-        }
+        
+        /* Colores de las etiquetas */
+        .tag-diseno { background-color: #e91e63; }
+        .tag-mundos { background-color: #2196f3; }
+        .tag-educacion { background-color: #4caf50; }
+        .tag-investigacion { background-color: #f44336; }
+        .tag-ia { background-color: #ff9800; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Aquí puedes cambiar el enlace de la imagen por tu foto de perfil real -->
-        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=300&auto=format&fit=crop" alt="Ricardo Rivera" class="profile-img">
+        <!-- Reemplaza foto.jpg si le pusiste otro nombre a tu archivo en GitHub -->
+        <img src="foto.jpg" alt="Ricardo Rivera Carrillo" class="profile-img">
 
         <h1>Ricardo Rivera Carrillo</h1>
-        <div class="contact-info">contacto@tucorreo.com | @TuUsuario</div>
+        
+        <div class="email">riveracarrillorrc@gmail.com</div>
 
-        <p class="tagline">
-            Ingeniero en Animación y Efectos Visuales | Desarrollo de Mundos Virtuales, Realidad Extendida (XR) y Automatización de Procesos.
-        </p>
-
-        <!-- Etiquetas de especialidades estilo la página de tu amigo -->
-        <div class="tags-wrapper">
-            <span class="tag tag-dev">Desarrollo 3D</span>
-            <span class="tag tag-vr">Mundos Virtuales</span>
-            <span class="tag tag-xr">Realidad Inmersiva</span>
-            <span class="tag tag-inv">Investigación</span>
+        <div class="bio">
+            Maestrante en Didáctica de las Ciencias: Matemáticas &nbsp;|&nbsp; Ingeniero en Animación &nbsp;|&nbsp; Investigador en Tecnología Inmersiva
         </div>
 
-        <div class="section-links">
-            <a href="tesis.html" class="link-btn">📁 Ver Documentos de Maestría</a>
+        <!-- Distribución de botones: 2 arriba y 3 abajo -->
+        <div class="tags-container">
+            <div class="tags-row">
+                <span class="tag tag-diseno">Diseño y Composición Visual</span>
+                <span class="tag tag-mundos">Mundos Virtuales</span>
+            </div>
+            <div class="tags-row">
+                <span class="tag tag-educacion">Educación</span>
+                <span class="tag tag-investigacion">Investigación</span>
+                <span class="tag tag-ia">IA Inmersiva</span>
+            </div>
         </div>
     </div>
 
